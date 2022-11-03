@@ -1,27 +1,64 @@
 import ExpenseItem from "./components/ExpenseItem";
+//import ExpenseDate from "./components/ExpenseDate";
 function App() {
-  const expense = [
-    { locationOfExpenditure: "Engine" },
-    { locationOfExpenditure: "NCB" },
-    { locationOfExpenditure: "Bumper" },
-    { locationOfExpenditure: "tiers" },
+  const expenses = [
+    {
+      id: "e1",
+      title: "car insurance",
+      amount: 50000,
+      date: new Date(2022, 1, 24),
+    },
+    {
+      id: "e2",
+
+      title: "toilet paper",
+
+      amount: 500,
+
+      date: new Date(2022, 11, 5),
+    },
+
+    {
+      id: "e3",
+
+      title: "mouse",
+
+      amount: 3500,
+
+      date: new Date(2022, 9, 2),
+    },
+    {
+      id: "e4",
+      title: "toilet paper",
+      amount: 500,
+      date: new Date(2022, 2, 2),
+    },
   ];
   return (
     <div>
       <ExpenseItem
-        locationOfExpenditure={expense[0].locationOfExpenditure}
+        title={expenses[0].title}
+        amount={expenses[0].amount}
+        date={expenses[0].date}
+      ></ExpenseItem>
+
+      <ExpenseItem
+        title={expenses[1].title}
+        amount={expenses[1].amount}
+        date={expenses[1].date}
+      ></ExpenseItem>
+
+      <ExpenseItem
+        title={expenses[2].title}
+        amount={expenses[2].amount}
+        date={expenses[2].date}
       ></ExpenseItem>
       <ExpenseItem
-        locationOfExpenditure={expense[1].locationOfExpenditure}
-      ></ExpenseItem>
-      <ExpenseItem
-        locationOfExpenditure={expense[2].locationOfExpenditure}
-      ></ExpenseItem>
-      <ExpenseItem
-        locationOfExpenditure={expense[3].locationOfExpenditure}
+        title={expenses[3].title}
+        amount={expenses[3].amount}
+        date={expenses[3].date}
       ></ExpenseItem>
     </div>
   );
 }
-
 export default App;
