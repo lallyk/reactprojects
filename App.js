@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import NewExpense from "./components/NewExpenses/NewExpense";
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 const DUMMY_EXPENSES = [
   {
